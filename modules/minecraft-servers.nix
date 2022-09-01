@@ -212,11 +212,6 @@ in
               + " set `services.minecraft-servers.eula` to `true` if you agree.";
           }
           {
-            assertion = !config.services.minecraft-server.enable && cfg.dataDir != config.services.minecraft-server.dataDir;
-            message = "`services.minecraft-servers.dataDir` and `services.minecraft-server.dataDir` conflict."
-              + " Set one to use a different data directory.";
-          }
-          {
             assertion =
               let
                 serverPorts = mapAttrsToList
